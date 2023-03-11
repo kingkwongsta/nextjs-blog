@@ -5,11 +5,18 @@ import Script from "next/script";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 const name = "King Kwong";
 export const siteTitle = "Learning Typescript on Nextjs";
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <Head>
